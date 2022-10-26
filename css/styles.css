@@ -88,7 +88,6 @@ input[type="number"]{-moz-appearance:textfield;}
 .matriz{
     display: grid;
     justify-content: center;
-
 }
 
 .input {
@@ -116,6 +115,8 @@ input[type="number"]{-moz-appearance:textfield;}
 .boton-calcular:hover {
     background-color: #25271e;
 }
+
+
 
 
 
