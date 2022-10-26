@@ -76,8 +76,11 @@ botonCalcular.addEventListener('click', () => {
 
     }
     console.log(arrMatriz)
-    solucion = metodoGauss(arrMatriz)
-    console.log(solucion)
+    let solucion = Object.values(metodoGauss(arrMatriz))
+    let solString = solucion.toString()
+    
+    let label = document.querySelector('.label')
+    label.innerHTML = `(${solString})`
 })
 // 1x+2y-1z=-1
 // 2x-1y+1z=9
