@@ -79,7 +79,7 @@ botonCalcular.addEventListener('click', () => {
     let solucion = Object.values(metodoGauss(arrMatriz))
     let solString = solucion.toString()
     
-    let label = document.querySelector('.label')
+    let label = document.querySelector('.labelSolucion')
     label.innerHTML = `(${solString})`
 })
 // 1x+2y-1z=-1
