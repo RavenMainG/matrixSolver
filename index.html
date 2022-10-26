@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Responsive nav</title>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="logo">
+            <img class="img" src="img/Icon simple-matrix.svg" alt="logo de la pagina">
+            <h1>Matrix solver</h1>
+        </div>
+
+        <button class="menu-boton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="menu-boton" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+
+        <ul class="menu menu-active">
+            <li><a class="" href="#">Determinante</a></li>
+            <li><a class="active" href="#">Soluciones</a></li>
+            <li><a href="#">Operaciones</a></li>
+        </ul>
+
+    </nav>
+
+    <main class="main">
+        <section class="matris-recibida">
+            <h2 class="h2">Matriz</h2>
+
+            <div class="matriz">
+                <input type="text" class="input" id="n1">
+                <input type="text" class="input" id="n2">
+                <input type="text" class="input" id="n3">
+            </div>
+
+
+            <div class="boton-calculo">
+                <button class="boton-calcular sustraer">-</button>
+                <button class="agregar boton-calcular">+</button>
+                <button class="boton-calcular">Calcular</button>
+            </div>
+            <div>
+                <button class="boton-calcular">Borrar</button>
+            </div>
+        </section>
+        <section class="resultado">
+            <h2 class="h2">Determinante</h2>
+            <label for="" class="label">?</label>
+        </section>
+    </main>
+
+    
+    <script src="js/app.js"></script>
+    
+</body>
+</html>

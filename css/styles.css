@@ -1,0 +1,165 @@
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+input[type="number"]{-moz-appearance:textfield;}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.nav {
+    height: 80px;
+    background: #25271e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+ /*    border-radius: 5px; */
+}
+
+.nav .logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.nav .logo img {
+    background-color: #fff;
+/*  padding-right: 1px;
+    padding-left: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px; */
+    padding: 1px;
+}
+
+.nav .logo h1 {
+    padding-left: 10px;
+}
+
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li {
+    margin: 0px 7px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active{
+    color: #1b1b1b;
+    background: #fff;
+}
+
+.nav .menu-boton{
+    display: none;
+}
+
+.h2 {
+    margin: 0px 0px 50px 0px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 200px 100px 200px;
+    text-align: center;
+}
+
+.matriz{
+    display: grid;
+    justify-content: center;
+
+}
+
+.input {
+    height: 30px;
+    width: 200px;
+    margin: 10px 20px;
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.boton-calcular {
+    background-color: #111;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 20px 0px 0px 0px;
+}
+
+.resultado {
+    display: grid;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.boton-calcular:hover {
+    background-color: #25271e;
+}
+
+
+
+@media (max-width: 940px) {
+
+    .nav .menu-boton{
+        display: block;
+    }
+
+    .nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.5s ease;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .nav ul.menu-activo{
+        left: 0%;
+    }
+    .nav ul li {
+        margin: 40px 0px;
+    }
+
+    .nav ul li a {
+        font-size: 20px;
+        display: block;
+    }
+
+    .nav ul li a:hover,
+    .nav ul li a.active {
+        color: cyan;
+        background: none;
+    }
+
+    .main {
+        display: block;
+        padding: 100px 200px 100px 200px;
+        text-align: center;
+    }
+}
+

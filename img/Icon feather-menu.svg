@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46.2" height="30.4" viewBox="0 0 46.2 30.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-3 -7.5)">
+    <path id="Trazado_2" data-name="Trazado 2" class="cls-1" d="M4.5,18H47.7" transform="translate(0 4.7)"/>
+    <path id="Trazado_3" data-name="Trazado 3" class="cls-1" d="M4.5,9H47.7" transform="translate(0)"/>
+    <path id="Trazado_4" data-name="Trazado 4" class="cls-1" d="M4.5,27H47.7" transform="translate(0 9.4)"/>
+  </g>
+</svg>
