@@ -1,18 +1,89 @@
 const menu = document.querySelector('.menu')
 const boton = document.querySelector('.menu-boton')
+const fila = document.querySelector('.clonar')
+
+const listaFilas = document.querySelector('.matriz')
 
 const botonAgregarFila = document.querySelector('.agregar')
+const botonQuitarFila = document.querySelector('.quitar')
+const botonBorrar = document.querySelector('.borrar')
+const botonCalcular = document.querySelector('.calcular')
 
-botonAgregarFila.addEventListener('click', () => {
-    console.log('presion')
-})
+let contadorFilas = 2
+
+
+console.log(contadorFilas)
 
 boton.addEventListener('click', () =>{
     menu.classList.toggle('menu-activo')
     console.log('presion');
 })
 
-array = [[2, 3, 4], [1, 4, 5]]
+botonQuitarFila.addEventListener('click', () => {
+    if(contadorFilas > 2){
+        let eliminar = listaFilas.lastChild
+        listaFilas.removeChild(eliminar)
+        contadorFilas --
+        console.log(contadorFilas)
+    }
+})
+
+botonAgregarFila.addEventListener('click', () => {
+    if(contadorFilas <= 4) {
+        let filaClonada = fila.cloneNode(true)
+        filaClonada.setAttribute("id", `${contadorFilas + 1}`)
+        console.log(filaClonada)
+        listaFilas.appendChild(filaClonada).classList.remove('clonar')
+        contadorFilas ++
+        console.log(contadorFilas)
+    }
+})
+
+botonBorrar.addEventListener('click', () => {
+    let eliminar
+    let iterador = contadorFilas
+    let inputs
+    for (let i = iterador; i > 2; i--){
+        eliminar = listaFilas.lastChild
+        listaFilas.removeChild(eliminar)
+        contadorFilas --
+    }
+    inputs = document.querySelectorAll('input')
+    inputs[0].value = ''
+    inputs[1].value = ''
+})
+
+botonCalcular.addEventListener('click', () => {
+    let inputs = document.querySelectorAll('input')
+    const arrSistema = []
+    for(let i = 0; i < contadorFilas; i++) {
+        arrSistema.push(inputs[i].value)
+    }
+
+    let str
+    let matches
+    let arrMatriz = []
+    for(let i = 0; i < contadorFilas; i++) {
+        console.log(i)
+        str = arrSistema[i]
+        console.log(str)
+        matches = str.match(/[\+\-]?\d+/g)
+        console.log(matches)
+        for(let i = 0; i < matches.length; i++){
+            matches[i] = Number(matches[i])
+        }
+        arrMatriz.push(matches)
+
+    }
+    console.log(arrMatriz)
+    solucion = metodoGauss(arrMatriz)
+    console.log(solucion)
+})
+// 1x+2y-1z=-1
+// 2x-1y+1z=9
+// 1x+3y+3z=6
+
+
 
 const modFila = (fila, pivote, sesgo) => {
     let newFila = []
@@ -100,5 +171,3 @@ const metodoGauss = (array) => {
     
     
 }
-
-metodoGauss(array)
