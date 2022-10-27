@@ -116,6 +116,18 @@ input[type="number"]{-moz-appearance:textfield;}
     background-color: #25271e;
 }
 
+.anuncios {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px;
+
+    
+}
+
+.boton-calcul0 {
+    display: flex;
+    justify-content: space-around;
+}
 
 
 

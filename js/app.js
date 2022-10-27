@@ -1,3 +1,9 @@
+
+const a = math.number(-3.6)                       // number, 0.3
+const b = math.fraction(a)
+console.log('Fraccion', b)
+console.log(`${b.n}/${b.d}`)
+
 const menu = document.querySelector('.menu')
 const boton = document.querySelector('.menu-boton')
 const fila = document.querySelector('.clonar')
@@ -51,6 +57,8 @@ botonBorrar.addEventListener('click', () => {
     inputs = document.querySelectorAll('input')
     inputs[0].value = ''
     inputs[1].value = ''
+    let label = document.querySelector('.labelSolucion')
+    label.innerHTML = '?'
 })
 
 botonCalcular.addEventListener('click', () => {
@@ -68,19 +76,30 @@ botonCalcular.addEventListener('click', () => {
         str = arrSistema[i]
         console.log(str)
         matches = str.match(/[\+\-]?\d+/g)
-        console.log(matches)
+        console.log('match', matches)
         for(let i = 0; i < matches.length; i++){
             matches[i] = Number(matches[i])
         }
         arrMatriz.push(matches)
 
     }
+
     console.log(arrMatriz)
     let solucion = Object.values(metodoGauss(arrMatriz))
-    let solString = solucion.toString()
+    // let solString = solucion.toString()
+    let newDiv = []
+    console.log('Solucion', solucion)
+
+    for(let i = 0; i < solucion.length; i++){
+        const a = math.number(solucion[i])                       // number, 0.3
+        const b = math.fraction(a)
+        newDiv.push(`${b.n * b.s}/${b.d}`)
+    }
+    newDiv = newDiv.toString()
+    console.log(newDiv)
     
     let label = document.querySelector('.labelSolucion')
-    label.innerHTML = `(${solString})`
+    label.innerHTML = `(${newDiv})`
 })
 // 1x+2y-1z=-1
 // 2x-1y+1z=9
