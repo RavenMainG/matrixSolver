@@ -38,10 +38,12 @@ botonAgregarFila.addEventListener('click', () => {
     if(contadorFilas <= 4) {
         let filaClonada = fila.cloneNode(true)
         filaClonada.setAttribute("id", `${contadorFilas + 1}`)
-        console.log(filaClonada)
         listaFilas.appendChild(filaClonada).classList.remove('clonar')
         contadorFilas ++
         console.log(contadorFilas)
+        let ecuacion = document.querySelectorAll('label.ecuacion')
+        ecuacion[ecuacion.length - 1].textContent = `Ecuacion ${contadorFilas}`
+        console.log(ecuacion)
     }
 })
 
